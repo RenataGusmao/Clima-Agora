@@ -16,6 +16,12 @@ function buscarClima(){
 
         document.getElementById("umidade").innerText = "Direção do vento: " + clima.winddirection;
 
+        document.getElementById("tempExtra").innerText = clima.temperature + " °C";
+
+        document.getElementById("ventoExtra").innerText = clima.windspeed + " km/h";
+        
+        document.getElementById("direcaoExtra").innerText = clima.winddirection;
+
     })
     .catch(error => {
         alert("Erro ao buscar dados da API");
