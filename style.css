@@ -1,0 +1,59 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f4f4f4;
+}
+
+header{
+    text-align:center;
+    background:#2c7be5;
+    color:white;
+    padding:20px;
+}
+
+main{
+    padding:20px;
+}
+
+.busca{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.busca input{
+    flex:1;
+    padding:10px;
+    font-size:16px;
+}
+
+.busca button{
+    padding:10px 15px;
+    border:none;
+    background:#2c7be5;
+    color:white;
+    cursor:pointer;
+}
+
+.busca button:hover{
+    background:#1a5fc2;
+}
+
+#resultado{
+    background:white;
+    padding:20px;
+    border-radius:5px;
+}
+
+#resultado h2{
+    margin-top:0;
+}
+
+@media (max-width:600px){
+
+    .busca{
+        flex-direction:column;
+    }
+
+}
