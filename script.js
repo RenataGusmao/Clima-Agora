@@ -19,5 +19,3 @@ function buscarClima() {
             alert("Erro ao buscar os dados do clima.");
         });
 }
-
-
