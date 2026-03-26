@@ -1,90 +1,142 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    margin:0;
-    padding:0;
-    background:#f4f4f4;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    color: #222;
 }
 
 header{
-    text-align:center;
-    color:white;
-    padding:40px 20px;
-    
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/recife-capa.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('img/recife-capa.jpg');
     background-size: cover;
     background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
 }
 
-header h1{
-    margin:0;
-    font-size:24px;
+.overlay h1{
+    margin: 0;
+    font-size: 2rem;
 }
 
-header p{
-    margin-top:10px;
-    font-size:14px;
+.overlay p{
+    margin-top: 10px;
+    font-size: 1rem;
 }
 
 main{
-    padding:20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.busca{
-    display:flex;
-    gap:10px;
-    margin-bottom:20px;
+.acao{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.busca input{
-    flex:1;
-    padding:10px;
-    font-size:16px;
+.acao button{
+    background: #2c7be5;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.busca button{
-    padding:10px 15px;
-    border:none;
-    background:#2c7be5;
-    color:white;
-    cursor:pointer;
+.acao button:hover{
+    background: #1f5fb8;
 }
 
-.busca button:hover{
-    background:#1a5fc2;
+.card-principal{
+    background: white;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
 }
 
-#resultado{
-    background:white;
-    padding:20px;
-    border-radius:5px;
+.card-principal h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
 }
 
-#resultado h2{
-    margin-top:0;
+.temperatura-grande{
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #2c7be5;
 }
 
-@media (max-width:600px){
+#descricao{
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0;
+}
 
-    .busca{
-        flex-direction:column;
+.detalhes-clima{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.card-detalhe{
+    background: white;
+    border-radius: 10px;
+    padding: 18px 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card-detalhe h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.card-detalhe p{
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c7be5;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 600px){
+
+    header{
+        padding: 40px 15px;
     }
 
-.extra{
-    margin-top:20px;
-    background:white;
-    padding:15px;
-    border-radius:5px;
-}
+    .overlay h1{
+        font-size: 1.8rem;
+    }
 
-.extra h3{
-    margin-top:0;
-    font-size:16px;
-}
+    .overlay p{
+        font-size: 0.95rem;
+    }
 
-.info{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:10px;
-    font-size:14px;
-}
+    .temperatura-grande{
+        font-size: 2.5rem;
+    }
+
+    .detalhes-clima{
+        grid-template-columns: 1fr;
+    }
+
+    .acao button{
+        width: 100%;
+    }
 }

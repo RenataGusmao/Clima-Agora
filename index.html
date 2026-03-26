@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Clima</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header>
-        <h1>Consulta de Clima</h1>
-        <p>Busque o clima da Cidade do Recife</p>
+        <div class="overlay">
+            <h1>Consulta de Clima</h1>
+            <p>Clima atual da cidade do Recife</p>
+        </div>
     </header>
 
     <main>
-
-        <section class="busca">
-            <input type="text" id="cidade" placeholder="Digite o nome da cidade">
-            <button onclick="buscarClima()">Buscar</button>
+        <section class="acao">
+            <button onclick="buscarClima()">Atualizar clima</button>
         </section>
 
-        <section id="resultado">
-
-            <h2 id="nomeCidade"></h2>
-
-            <p>Temperatura: <span id="temperatura"></span></p>
-            <p>Clima: <span id="descricao"></span></p>
-            <p>Umidade: <span id="umidade"></span></p>
-
+        <section class="card-principal">
+            <h2 id="nomeCidade">Recife</h2>
+            <p class="temperatura-grande" id="temperatura">-- °C</p>
+            <p id="descricao">Carregue os dados do clima</p>
         </section>
-       
-        <section class="extra">
-            <h3>Detalhes do clima</h3>
 
-        <div class="info">
-            <p>🌡️ Temperatura atual</p>
-            <span id="tempExtra"></span>
-        </div>
+        <section class="detalhes-clima">
+            <div class="card-detalhe">
+                <h3>Vento</h3>
+                <p id="ventoExtra">-- km/h</p>
+            </div>
 
-        <div class="info">
-          <p>💨 Velocidade do vento</p>
-          <span id="ventoExtra"></span>
-        </div>
+            <div class="card-detalhe">
+                <h3>Direção</h3>
+                <p id="direcaoExtra">--</p>
+            </div>
 
-        <div class="info">
-            <p>🧭 Direção do vento</p>
-            <span id="direcaoExtra"></span>
-         </div>
-         </section>
+            <div class="card-detalhe">
+                <h3>Horário</h3>
+                <p id="horarioClima">--:--</p>
+            </div>
+
+            <div class="card-detalhe">
+                <h3>Temperatura</h3>
+                <p id="tempExtra">-- °C</p>
+            </div>
+        </section>
     </main>
 
+    <footer>
+        <p>Dados fornecidos por Open-Meteo.</p>
+    </footer>
+
     <script src="script.js"></script>
-
 </body>
-
 </html>
