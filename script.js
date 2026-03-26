@@ -29,3 +29,9 @@ function buscarClima(){
     });
 
 }
+
+document.getElementById("cidade").addEventListener("keypress", function(event){
+    if(event.key === "Enter"){
+        buscarClima();
+    }
+});
