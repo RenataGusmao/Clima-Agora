@@ -153,6 +153,14 @@ footer{
     color: #6b7280;
 }
 
+.form-busca button:last-child{
+    background: #10b981;
+}
+
+.form-busca button:last-child:hover{
+    background: #059669;
+}
+
 @media (max-width: 480px){
     .overlay h1{
         font-size: 1.8rem;
