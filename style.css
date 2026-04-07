@@ -2,8 +2,8 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f2f2f2;
-    color: #222;
+    background: #eef3f8;
+    color: #1f2937;
 }
 
 header{
@@ -12,12 +12,15 @@ header{
     background-position: center;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px 40px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .overlay h1{
     margin: 0;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .overlay p{
@@ -26,78 +29,114 @@ header{
 }
 
 main{
-    padding: 20px;
-    max-width: 900px;
+    padding: 20px 16px 30px;
+    max-width: 480px;
     margin: 0 auto;
 }
 
 .acao{
-    display: flex;
-    justify-content: center;
+    margin-top: -20px;
     margin-bottom: 20px;
 }
 
-.acao button{
+.form-busca{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: white;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.label-busca{
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #374151;
+}
+
+.form-busca input{
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: #f9fafb;
+}
+
+.form-busca input:focus{
+    outline: 2px solid #2c7be5;
+    outline-offset: 2px;
+}
+
+.form-busca button{
     background: #2c7be5;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 14px;
     font-size: 16px;
-    border-radius: 8px;
+    font-weight: bold;
+    border-radius: 10px;
     cursor: pointer;
+    min-height: 48px;
 }
 
-.acao button:hover{
+.form-busca button:hover{
     background: #1f5fb8;
 }
 
+.form-busca button:focus{
+    outline: 2px solid #0d47a1;
+    outline-offset: 2px;
+}
+
 .card-principal{
-    background: white;
-    border-radius: 12px;
-    padding: 25px 20px;
+    background: linear-gradient(135deg, #2c7be5, #5aa2ff);
+    color: white;
+    border-radius: 20px;
+    padding: 24px 20px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 16px rgba(44,123,229,0.25);
     margin-bottom: 20px;
 }
 
 .card-principal h2{
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.6rem;
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .temperatura-grande{
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: bold;
     margin: 10px 0;
-    color: #2c7be5;
 }
 
 #descricao{
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 0;
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.95;
 }
 
 .detalhes-clima{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 14px;
 }
 
 .card-detalhe{
     background: white;
-    border-radius: 10px;
-    padding: 18px 15px;
+    border-radius: 16px;
+    padding: 18px 14px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
 }
 
 .card-detalhe h3{
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: #333;
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+    color: #374151;
 }
 
 .card-detalhe p{
@@ -109,60 +148,12 @@ main{
 
 footer{
     text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    color: #666;
+    padding: 20px 16px 30px;
+    font-size: 0.85rem;
+    color: #6b7280;
 }
 
-.form-busca{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
-
-.label-busca{
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: #222;
-}
-
-.form-busca input{
-    width: 100%;
-    padding: 14px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
-
-.form-busca button{
-    background: #2c7be5;
-    color: white;
-    border: none;
-    padding: 14px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    min-height: 48px;
-}
-
-.form-busca button:hover{
-    background: #1f5fb8;
-}
-
-.form-busca input:focus,
-.form-busca button:focus{
-    outline: 2px solid #0d47a1;
-    outline-offset: 2px;
-}
-
-@media (max-width: 600px){
-
-    header{
-        padding: 40px 15px;
-    }
-
+@media (max-width: 480px){
     .overlay h1{
         font-size: 1.8rem;
     }
@@ -172,14 +163,6 @@ footer{
     }
 
     .temperatura-grande{
-        font-size: 2.5rem;
-    }
-
-    .detalhes-clima{
-        grid-template-columns: 1fr;
-    }
-
-    .acao button{
-        width: 100%;
+        font-size: 2.8rem;
     }
 }
