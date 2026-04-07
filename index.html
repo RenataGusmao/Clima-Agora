@@ -11,19 +11,21 @@
     <header>
         <div class="overlay">
             <h1>Consulta de Clima</h1>
-            <p>Clima atual da cidade do Recife</p>
+            <p>Consulte o clima de qualquer cidade do Brasil</p>
         </div>
     </header>
 
     <main>
+
         <section class="acao">
-            <button onclick="buscarClima()">Atualizar clima</button>
+            <input type="text" id="cidade" placeholder="Digite a cidade">
+            <button onclick="buscarClima()">Buscar</button>
         </section>
 
         <section class="card-principal">
-            <h2 id="nomeCidade">Recife</h2>
+            <h2 id="nomeCidade">---</h2>
             <p class="temperatura-grande" id="temperatura">-- °C</p>
-            <p id="descricao">Carregue os dados do clima</p>
+            <p id="descricao">Digite uma cidade para visualizar o clima</p>
         </section>
 
         <section class="detalhes-clima">
