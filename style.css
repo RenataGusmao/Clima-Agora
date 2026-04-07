@@ -114,6 +114,49 @@ footer{
     color: #666;
 }
 
+.form-busca{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.label-busca{
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.form-busca input{
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-busca button{
+    background: #2c7be5;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    min-height: 48px;
+}
+
+.form-busca button:hover{
+    background: #1f5fb8;
+}
+
+.form-busca input:focus,
+.form-busca button:focus{
+    outline: 2px solid #0d47a1;
+    outline-offset: 2px;
+}
+
 @media (max-width: 600px){
 
     header{
