@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicação web para consulta de clima de cidades do Brasil com dados fornecidos pela Open-Meteo.">
+    <meta name="theme-color" content="#2c7be5">
     <title>Consulta de Clima</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
@@ -18,14 +21,17 @@
     <main>
 
         <section class="acao">
-            <input type="text" id="cidade" placeholder="Digite a cidade">
-            <button onclick="buscarClima()">Buscar</button>
+            <form class="form-busca" onsubmit="buscarClima(); return false;">
+                <label for="cidade" class="label-busca">Digite o nome da cidade</label>
+                <input type="text" id="cidade" placeholder="Ex: Recife" autocomplete="off">
+                <button type="submit">Buscar</button>
+            </form>
         </section>
 
-        <section class="card-principal">
+        <section class="card-principal" aria-live="polite">
             <h2 id="nomeCidade">---</h2>
             <p class="temperatura-grande" id="temperatura">-- °C</p>
-            <p id="descricao">Digite uma cidade para visualizar o clima</p>
+            <p id="descricao">Digite uma cidade para visualizar o clima.</p>
         </section>
 
         <section class="detalhes-clima">
